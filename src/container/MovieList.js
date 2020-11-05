@@ -1,7 +1,6 @@
 import React, {
   useState,
   useEffect,
-  useCallback,
   Suspense,
   lazy,
 } from 'react';
@@ -13,27 +12,27 @@ const MovieCard = lazy(() => import('../component/MovieCard'));
 
 const MovieList = ({ rowTitle, requestURL }) => {
   const [movies, setMovies] = useState([]);;
-  
-  const getMoviesFromAPI = useCallback(async () => {
-    try {
-      const response = await axios.get(requestURL);
-      setMovies(response.data.results);
-    } catch (error) {
-      console.log(error)
-    }
-  }, [requestURL]);
 
   useEffect(() => {
+    const getMoviesFromAPI = async () => {
+      try {
+        const response = await axios.get(requestURL);
+        setMovies(response.data.results);
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
     getMoviesFromAPI();
-  }, [getMoviesFromAPI]);
+  }, [requestURL]);
   
   return (
-    <div className={styles.Container__MovieList}>
-      <div className={styles.Container__RowTitle}>
+    <div className={styles.Container}>
+      <div className={styles.RowTitle}>
         <h2>{rowTitle}</h2>
       </div>
 
-      <div className={styles.Container__Movies}>
+      <div className={styles.Movies}>
         {movies.map((movie, index) => {
           const animationDelayTime = (150 * index);
 

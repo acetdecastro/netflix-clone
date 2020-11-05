@@ -2,28 +2,33 @@ import { useState, useEffect } from 'react';
 import styles from './css/App.module.css';
 import Row from './container/Row';
 import rowData from './utils/rowData';
+import Banner from './component/Banner';
+import Nav from './container/Nav';
 
 const App = () => {
   const [rows, setRows] = useState([]);
-
-  const getRowDataFromUtils = () => {
-    setRows(rowData);
-  };
-
+  
   useEffect(() => {
-    getRowDataFromUtils();
+    setRows(rowData);
   }, [])
 
   return (
     <div className={styles.Container}>
-      <main>
-        {rows.map((row, index) => (
-          <Row
-            key={index}
-            rowTitle={row.title}
-            requestURL={row.requestURL}
-          />
-        ))}
+      <Nav />
+
+      <main className={styles.Main__Container}>
+        <Banner />
+
+        <section className={styles.Rows}>
+          {rows.map((row, index) => (
+            <Row
+              key={index}
+              rowTitle={row.title}
+              requestURL={row.requestURL}
+            />
+          ))}
+        </section>
+
       </main>
     </div>
   );

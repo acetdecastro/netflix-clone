@@ -1,21 +1,23 @@
-.Container__MovieList {
+.Container {
   display: flex;
   flex-direction: column;
-  padding: 2rem 3rem;
+  padding: 2rem 0;
   margin-bottom: -6rem;
 }
 
-.Container__Movies {
+.RowTitle {
+  margin-bottom: -3rem;
+  color: #d3d4d8;
+  font-size: 1.1rem;
+}
+
+.Movies {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 3.5rem 0;
 }
 
-.Container__Movies::-webkit-scrollbar {
+.Movies::-webkit-scrollbar {
   display: none;
-}
-
-.Container__RowTitle {
-  margin-bottom: -3rem;
 }

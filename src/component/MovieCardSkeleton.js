@@ -2,13 +2,11 @@ import React from 'react';
 import styles from '../css/MovieCardSkeleton.module.css'
 
 const MovieCardSkeleton = ({ rowTitle, animationDelayTime }) => {
-  let divStyles = styles.Card__Backdrop;
+  let divStyles = styles.Backdrop;
 
   if (rowTitle === 'Netflix Originals') {
-    divStyles = styles.Card__Poster;
+    divStyles = styles.Poster;
   }
-
-  console.log(divStyles)
 
   return (
     <div

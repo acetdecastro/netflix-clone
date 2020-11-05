@@ -1,4 +1,4 @@
-.Card__Backdrop {
+.Backdrop {
   min-width: 18.132rem;
   min-height: 10.199rem;
   background-color: #e50914;
@@ -8,7 +8,7 @@
   animation-fill-mode: backwards;
 }
 
-.Card__Poster {
+.Poster {
   min-width: 14.666rem;
   min-height: 22rem;
   background-color: #e50914;

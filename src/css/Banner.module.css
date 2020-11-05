@@ -1,0 +1,149 @@
+.Container {
+  width: 100%;
+}
+
+.Image__Container {
+
+}
+
+.Image {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.Vignette__Container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -28rem;
+  height: 23rem;
+  width: auto;
+  padding: 0 0 0 3.7rem;
+  margin-bottom: 3.8rem;
+}
+
+.Vignette__Details {
+  height: auto;
+  width: 30rem;
+}
+
+.Vignette__Title {
+  color: rgb(248, 241, 241);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05rem;
+}
+
+.Vignette__Overview {
+  color: rgb(240, 240, 240);
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.Vignette__Actions_Container {
+  width: 30rem;
+  margin-top: 2rem;
+}
+
+.Vignette__Buttons {
+  display: inline-flex;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  background: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
+  border: none;
+  transition: background-color 300ms;
+}
+
+.Vignette__Play__Button {
+  padding: 0.8rem 1.5rem;
+  background-color: #fff;
+  color: rgb(24, 24, 24);
+  margin-right: 0.6rem;
+}
+
+.Vignette__Play__Button__Icon {
+  fill: currentColor;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.7rem;
+}
+
+.Vignette__Play__Button:hover {
+  background-color: rgba(255,255,255,0.75);
+}
+
+.Vignette__MoreInfo__Button {
+  padding: 0.8rem 2rem;
+  background-color: rgba(109,109,110,0.7);
+  color: #fff;
+}
+
+.Vignette__MoreInfo__Button:hover {
+  background-color: rgba(109,109,110,0.4);
+}
+
+.Vignette__MoreInfo__Button__Icon {
+  fill: currentColor;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1.1rem;
+}
+
+.Backdrop {
+  min-height: 67.5rem;
+  background-color: #4d4b4b;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-fill-mode: backwards;
+  background-size: cover;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: .0;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Vignette__Container {
+    display: flex;
+    flex-direction: column;
+    margin-top: -25rem;
+    height: 11.1rem;
+    width: auto;
+    padding: 0 0 0 3.7rem;
+    margin-bottom: 3.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Vignette__Container {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20rem;
+    height: 15rem;
+    width: auto;
+    padding: 0 0 0 3.7rem;
+    margin-bottom: 3.8rem;
+
+  }
+}
+
+@media (max-width: 640px) {
+  .Vignette__Container {
+    display: flex;
+    flex-direction: column;
+    margin-top: -18rem;
+    height: 13rem;
+    width: auto;
+    padding: 0 0 0 3.7rem;
+    margin-bottom: 3.8rem;
+  }
+}
+

@@ -1,0 +1,17 @@
+.Backdrop {
+  /* min-width: 120rem; */
+  min-height: 67.5rem;
+  background-color: #f5c6c8;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-fill-mode: backwards;
+  background-size: cover;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: .0;
+  }
+  50% {
+    opacity: .5;
+  }
+}

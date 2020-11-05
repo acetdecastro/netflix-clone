@@ -3,11 +3,11 @@ import styles from '../css/MovieCard.module.css';
 
 const Movie = ({ rowTitle, backdrop_path, poster_path, original_title }) => {
   let imgURL = `https://image.tmdb.org/t/p/original/${backdrop_path}`;
-  let imgStyles = styles.Card_backdrop;
+  let imgStyles = styles.Backdrop;
 
   if (rowTitle === 'Netflix Originals') {
     imgURL = `https://image.tmdb.org/t/p/original/${poster_path}`;
-    imgStyles = styles.Card_poster;
+    imgStyles = styles.Poster;
   }
   
   if (imgURL.includes('null')) {
