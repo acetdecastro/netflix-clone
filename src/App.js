@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import styles from './css/App.module.css';
+import Row from './container/Row';
+import rowData from './utils/rowData';
 
-function App() {
+const App = () => {
+  const [rows, setRows] = useState([]);
+
+  const getRowDataFromUtils = () => {
+    setRows(rowData);
+  };
+
+  useEffect(() => {
+    getRowDataFromUtils();
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.Container}>
+      <main>
+        {rows.map((row, index) => (
+          <Row
+            key={index}
+            rowTitle={row.title}
+            requestURL={row.requestURL}
+          />
+        ))}
+      </main>
     </div>
   );
-}
+};
 
 export default App;

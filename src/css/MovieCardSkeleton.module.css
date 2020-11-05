@@ -1,0 +1,28 @@
+.Card__Backdrop {
+  min-width: 18.132rem;
+  min-height: 10.199rem;
+  background-color: #e50914;
+  border-radius: 0.3rem;
+  margin-right: 0.2rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-fill-mode: backwards;
+}
+
+.Card__Poster {
+  min-width: 14.666rem;
+  min-height: 22rem;
+  background-color: #e50914;
+  border-radius: 0.3rem;
+  margin-right: 0.2rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-fill-mode: backwards;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: .0;
+  }
+  50% {
+    opacity: .5;
+  }
+}

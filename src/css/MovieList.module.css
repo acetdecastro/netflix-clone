@@ -1,0 +1,21 @@
+.Container__MovieList {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  margin-bottom: -6rem;
+}
+
+.Container__Movies {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 3.5rem 0;
+}
+
+.Container__Movies::-webkit-scrollbar {
+  display: none;
+}
+
+.Container__RowTitle {
+  margin-bottom: -3rem;
+}
