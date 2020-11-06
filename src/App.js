@@ -28,7 +28,6 @@ const App = () => {
             />
           ))}
         </section>
-
       </main>
     </div>
   );

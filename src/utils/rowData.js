@@ -7,7 +7,8 @@ const rowData = [
   }, {
     title: 'Netflix Originals',
     requestURL: `/discover/tv?api_key=${REACT_APP_TMDB_API_KEY}&with_networks=213`,
-  }, {
+  }
+  , {
     title: 'Top Rated Movies',
     requestURL: `/movie/top_rated?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US`,
   }, {
